@@ -1,0 +1,119 @@
+@media screen and (width <=1150px) {
+
+    .nav-library {
+        position: absolute;
+        left: 0;
+        transform: translate(-110%);
+        transition-property: all;
+        transition-duration: 1s;
+        z-index: 3;
+        background-color: #000000eb;
+        padding-right: 14px;
+        max-width: 345px;
+        width: 100%;
+    }
+
+
+
+    .nav-library nav .cross {
+        display: inline-block;
+        transition: all 500ms;
+    }
+
+    .main-area {
+        width: 100%;
+        transition-property: all;
+        transition-duration: 500ms;
+        z-index: 2;
+    }
+
+    .main-area .top-bar .fr-bk-btn {
+        display: none;
+    }
+
+    .main-area .top-bar .hamburger {
+        display: block;
+        cursor: pointer;
+        transition: all 500ms
+    }
+
+    .main-area .top-bar .hamburger:hover {
+        transform: scale(1.1);
+    }
+
+    .main-area .top-bar .logo2 {
+        display: block;
+    }
+
+
+
+    .main-area .player-controller .seekbar {
+        width: 80%;
+    }
+
+
+
+}
+
+@media screen and (width <=780px) {
+    .main-area .player-controller .seekbar {
+        width: 75%;
+    }
+}
+
+@media screen and (width <=575px) {
+
+    .main-area .top-bar .logo2 {
+        display: none;
+    }
+
+    .main-area.bg-grey .focal-section .playlists .playlist {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/1;
+    }
+
+    .main-area.bg-grey .focal-section .playlists .playlist img {
+        width: 75%;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+        margin: 0 auto;
+        object-fit: contain;
+        object-position: center;
+        aspect-ratio: 1/1;
+    }
+
+    .main-area .player-controller {
+        height: 180px;
+    }
+
+    .main-area .player-controller .player {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-area .player-controller .player .extra-btns {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .main-area .player-controller .player .extra-btns .volume {
+        display: none;
+    }
+
+    .main-area .player-controller .player .duration-mob {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-area .player-controller .seekbar {
+        width: 90%;
+    }
+
+    .main-area .player-controller .seekbar .duration,
+    .main-area .player-controller .seekbar .currentTime {
+        display: none;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utility.css" />
+  <link rel="stylesheet" href="media.css">
+  <link rel="shortcut icon" href="./assets/images/logo2.svg" type="image/x-icon">
+  <title>Beats - The breath of Music</title>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="nav-library flex-col">
+      <nav class="flex bg-grey">
+        <div class="cross button"></div>
+        <a href="./" title="Beats Official">
+          <div class="logo invert">
+            <img src="./assets/images/logo.svg" alt="logo" />
+          </div>
+        </a>
+        <div class="links flex-col">
+          <a href="">
+            <div class="home flex">
+              <img src="./assets/images/home.svg" alt="home" class="icon invert" />
+              Home
+            </div>
+          </a>
+          <a href="">
+            <div class="search flex">
+              <img src="./assets/images/search.svg" alt="search" class="icon invert" />
+              Search
+            </div>
+          </a>
+        </div>
+      </nav>
+
+      <div class="library bg-grey flex-col">
+        <div class="heading-container flex">
+          <h1 class="flex"><img src="./assets/images/library.svg" alt="" class="invert">Library</h1>
+          <div class="autoplay">
+            <div class="thumb">
+              <div class="before"></div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="library-list flex-col">
+        </ul>
+
+        <div class="footer">
+
+          <button class="language button">English</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main-area bg-grey flex-col">
+
+      <div class="top-bar">
+        <div class="hamburger invert button"></div>
+        <div class="fr-bk-btn flex">
+          <!-- <div class="prev-container bg-grey flex center button">
+                        <div class="prev invert"></div>
+                    </div>
+                    <div class="next-container bg-grey flex center button">
+                        <div class="next invert"></div>
+                    </div> -->
+        </div>
+        <!-- http://192.168.1.9:3000/index.html -->
+        <div class="sign-in-up-btn flex">
+          <button class="sign-up button">Sign Up</button>
+          <button class="log-in button">Log In</button>
+        </div>
+      </div>
+      <div class="player-controller">
+        <div class="player flex">
+          <div class="track">
+            <div class="track-details">
+              This is the track playing now | Artist | Album
+            </div>
+          </div>
+          <div class="controls flex center">
+            <div class="prev invert button"></div>
+            <div class="play-pause invert button"></div>
+            <div class="next invert button"></div>
+          </div>
+          <div class="extra-btns">
+
+            <div class="volume invert flex center">
+              <input class="vol-bar invert" type="range" name="volume" id="volume" min="0" max="100" value=100>
+            </div>
+            <div class="play-mode invert button"></div>
+            <div class="show-hide-player-container button flex center">
+              <div class="show-hide-player"></div>
+            </div>
+          </div>
+          <div class="duration-mob">
+            00:00/00:00
+          </div>
+        </div>
+        <div class="seekbar">
+          <div class="currentTime">00:00</div>
+          <input type="range" class="progress-bar" value="0" name="progress-bar" id="progress-bar" min="0" max="100">
+          <div class="duration">
+            00:00
+          </div>
+        </div>
+
+      </div>
+
+      <div class="focal-section flex-col">
+        <h1>Beats' Playlists</h1>
+        <div class="playlists flex center">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
