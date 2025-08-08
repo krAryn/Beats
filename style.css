@@ -439,7 +439,7 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #222222 black;
     align-content: flex-start;
-    /* padding-top: 30px; */
+    padding-top: 10px;
     /* border: 5px solid red; */
 }
 
