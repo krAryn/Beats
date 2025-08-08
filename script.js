@@ -2,6 +2,7 @@
 //   {songName: "", artistName: "", songUrl: ""}
 // ]
 
+
 (async function () {
   let availablePlayerModes = [
     "repeat-none",
@@ -9,8 +10,10 @@
     "repeat-all",
     "shuffle",
   ];
-
+  
   let playerMode = availablePlayerModes[0]; // repeat-none, repeat-one, repeat-all, shuffle
+  let HOSTNAME = "127.0.0.1"
+  let PORT = 3000
 
   document
     .querySelector(".extra-btns")
@@ -38,14 +41,14 @@
   }
 
   let currentAudio = new Audio(
-    "http://192.168.1.9:3000/Songs/Album 1/Alone@BoDleasons.mp3"
+    `http://${HOSTNAME}:3000/Songs/Album 1/Alone@BoDleasons.mp3`
   );
 
   // Load all albums
-  let res = await fetch(`http://192.168.1.9:3000/Songs`);
+  let res = await fetch(`http://${HOSTNAME}:3000/Songs`);
   let data = await res.text();
 
-  let albumUrl = "http://192.168.1.9:3000/Songs/Album%201/";
+  let albumUrl = `http://${HOSTNAME}:3000/Songs/Album%201/`;
 
   let doc = document.createElement("div");
   doc.innerHTML = data;
@@ -59,7 +62,7 @@
       div.classList.add("playlist", "flex");
       div.innerHTML = `
       <div class="load-playlist flex center"></div>
-      <img src=${albumInfo["cover"]} alt="">
+      <img src=http://${HOSTNAME}:${PORT}/${albumInfo["cover"]} alt="">
       <h2>${albumInfo["name"]}</h2>
       <p>${albumInfo["desc"]}</p>
       <div class="url" style="display: none">${ele.href}</div>
@@ -141,7 +144,7 @@
           </div>
           <div class="play-now after"></div>
           `;
-      li.querySelector(".track-cover").style.backgroundImage = `url(${albumInfoObj["cover"]})`
+      li.querySelector(".track-cover").style.backgroundImage = `url(http://${HOSTNAME}:${PORT}/${albumInfoObj["cover"]})`
       ele.append(li);
     });
 

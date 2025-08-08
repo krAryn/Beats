@@ -1,5 +1,5 @@
 {
     "name": "Album 2",
-    "cover": "http://192.168.1.9:3000/assets/images/8.jpg",
+    "cover": "assets/images/8.jpg",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates!"
 }
